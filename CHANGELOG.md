@@ -13,7 +13,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - show at `/` log items
 - show at `/log/:logPath` log items + log content via react-roter loader
 - add react-md
+- replace index.html to src
+
+## [0.0.2] - 2024-11-13
+
+- root layout
+- version
 
 ## TODO:
 
 - [-] github actions build the app make commit to main
+- [-] back button
