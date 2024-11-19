@@ -2,7 +2,8 @@ import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import LogContent from './LogContent'
 import { LogListItem } from './types'
-import H1 from './H1'
+
+import { AssignmentRoundedIcon, Menu } from 'otmjka-ui-components'
 
 type LogWidgetProps = {
   state: {
@@ -14,20 +15,16 @@ const LogWidget: FC<LogWidgetProps> = (props) => {
   const {
     state: { logList },
   } = props
-
+  const menuItems = logList.map(({ path }) => ({
+    text: path,
+    url: `/logs/${path}`,
+    icon: <AssignmentRoundedIcon />,
+  }))
   return (
-    <>
-      <H1>log</H1>
-      <LogContent>
-        <ul>
-          {logList.map(({ path }, index) => (
-            <li key={'' + path + index}>
-              <Link to={`/logs/${path}`}>{path}</Link>
-            </li>
-          ))}
-        </ul>
-      </LogContent>
-    </>
+    <LogContent>
+      {/* @ts-expect-error todo: */}
+      <Menu menuItems={menuItems} MenuItem={Link} />
+    </LogContent>
   )
 }
 

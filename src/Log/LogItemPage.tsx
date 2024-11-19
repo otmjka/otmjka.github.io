@@ -1,21 +1,14 @@
 import { FC } from 'react'
-import { useParams, useLoaderData } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 import Markdown from 'react-markdown'
-
-import useLogState from './useLogState'
-import LogWidget from './LogWidget'
-import LogItemContentWidget from './LogItemContentWidget'
+import { Box } from '@mui/material'
 
 const LogItemPage: FC = () => {
-  const logState = useLogState()
-  const { logPath } = useParams()
   const data = useLoaderData()
   return (
-    <>
+    <Box pt={7}>
       <Markdown>{data as string}</Markdown>
-      <LogWidget state={logState} />
-      <LogItemContentWidget state={{ title: logPath || '---' }} />
-    </>
+    </Box>
   )
 }
 
