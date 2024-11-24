@@ -1,25 +1,54 @@
 import { FC } from 'react'
 import { Outlet } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import { Box, Container } from '@mui/material'
+// import { Link } from 'react-router-dom'
+import { Box, Container, GlobalStyles } from '@mui/material'
 
-import { AppTheme, AppAppBar } from 'otmjka-ui-components'
+import {
+  DosTheme,
+  DosAppBar,
+  DosToolbar,
+  DosAppBarMenu,
+  DosAppBarMenuItem,
+  DosRedLetter,
+  DosRGBox,
+} from 'otmjka-ui-components'
 
-import packageJson from '../../package.json'
+import { appBarMenuItems } from './appBarMenuItems'
+// import packageJson from '../../package.json'
 
 const RootLayout: FC = () => {
   return (
-    <AppTheme>
-      <AppAppBar logoLink={Link} />
-      <>
+    <DosTheme>
+      <GlobalStyles
+        styles={{
+          body: { margin: 0 },
+        }}
+      />
+      <DosAppBar>
+        <DosToolbar>
+          <DosAppBarMenu>
+            {appBarMenuItems.map((menuItem) => (
+              <DosAppBarMenuItem key={menuItem.label}>
+                <DosRedLetter letterIndex={menuItem.letterIndex}>
+                  {menuItem.label}
+                </DosRedLetter>
+              </DosAppBarMenuItem>
+            ))}
+          </DosAppBarMenu>
+        </DosToolbar>
+      </DosAppBar>
+      {/* <>
         <Link to="/">rndmsd0</Link> [{packageJson.version}]
-      </>
+      </> */}
       <Box pt={7}>
         <Container fixed>
-          <Outlet />
+          <DosRGBox />
+          <Box sx={{ position: 'relative' }}>
+            <Outlet />
+          </Box>
         </Container>
       </Box>
-    </AppTheme>
+    </DosTheme>
   )
 }
 

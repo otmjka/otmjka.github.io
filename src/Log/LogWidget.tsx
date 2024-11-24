@@ -1,9 +1,18 @@
 import { FC } from 'react'
-import { Link } from 'react-router-dom'
-import LogContent from './LogContent'
+
+import { Typography } from '@mui/material'
 import { LogListItem } from './types'
 
-import { AssignmentRoundedIcon, Menu } from 'otmjka-ui-components'
+import styled from 'styled-components'
+
+import {
+  DosPaper,
+  DosBorderVariant,
+  DosButton,
+  DosFieldset,
+  Menu,
+} from 'otmjka-ui-components'
+import { Link } from 'react-router-dom'
 
 type LogWidgetProps = {
   state: {
@@ -11,20 +20,41 @@ type LogWidgetProps = {
   }
 }
 
+type ItemShape = {
+  children: string
+  to: string
+}
+
+const LinkComponent = styled<typeof Link, ItemShape>(Link)(() => ({
+  color: '#fff',
+  textDecoration: 'none',
+
+  '&:hover': {
+    color: '#000',
+  },
+}))
+
 const LogWidget: FC<LogWidgetProps> = (props) => {
   const {
     state: { logList },
   } = props
   const menuItems = logList.map(({ path }) => ({
-    text: path,
-    url: `/logs/${path}`,
-    icon: <AssignmentRoundedIcon />,
+    children: path,
+    to: `/logs/${path}`,
   }))
+
   return (
-    <LogContent>
-      {/* @ts-expect-error todo: */}
-      <Menu menuItems={menuItems} MenuItem={Link} />
-    </LogContent>
+    <DosPaper dosBorderVariant={DosBorderVariant.none}>
+      <DosFieldset>
+        <Typography>askdjalksdjkl</Typography>
+        <Menu<ItemShape>
+          menuItems={menuItems}
+          MenuItemComponent={LinkComponent}
+        />
+        <hr />
+        <DosButton>more...</DosButton>
+      </DosFieldset>
+    </DosPaper>
   )
 }
 

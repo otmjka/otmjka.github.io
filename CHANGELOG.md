@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.  
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and [Conventional Commits](https://www.conventionalcommits.org/).
 
+## TODO:
+
+- [-] github actions build the app make commit to main
+- [+] back button via logo
+- [-] images support, code supp
+
+## [0.0.3] - 2024-11-19
+
+### Added
+
+- components from ui-kit
+- header, logo, github link
+
+## [0.0.2] - 2024-11-13
+
+- root layout
+- version
+
 ## [0.0.1] - 2024-11-13
 
 ### Added
@@ -14,13 +32,3 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - show at `/log/:logPath` log items + log content via react-roter loader
 - add react-md
 - replace index.html to src
-
-## [0.0.2] - 2024-11-13
-
-- root layout
-- version
-
-## TODO:
-
-- [-] github actions build the app make commit to main
-- [-] back button
