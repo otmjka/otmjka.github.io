@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import useLogState from './useLogState'
-import LogWidget from './LogWidget'
+// import LogWidget from './LogWidget'
 
 import { H1 } from 'otmjka-ui-components'
 
@@ -9,8 +9,8 @@ const LogPage: FC = () => {
   return (
     <>
       <H1>log</H1>
-
-      <LogWidget state={logState} />
+      {JSON.stringify(logState, null, 2)}
+      {/* <LogWidget state={logState} /> */}
     </>
   )
 }
