@@ -7,7 +7,9 @@ const appRouter = createBrowserRouter([
   {
     element: <RootLayout />,
     children: [
+      /* */
       { path: '/', element: <LogPage /> },
+      /* */
       {
         path: '/logs/:logPath',
         loader: async ({ params: { logPath } }) => {
