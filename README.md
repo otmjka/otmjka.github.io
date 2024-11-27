@@ -1,5 +1,7 @@
 # otmjka github pages site
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/aeb96a96-5ef2-49f4-8232-4dc2ab0f64e5]([https://private-user-images.githubusercontent.com/5286446/390320416-a9dcd643-6be1-4ddb-a94e-d7de24951186.png](https://github.com/user-attachments/assets/aeb96a96-5ef2-49f4-8232-4dc2ab0f64e5)">
+
 Entry Point
 src/index.html -> src/main.tsx
 
