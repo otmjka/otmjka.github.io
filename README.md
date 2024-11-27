@@ -1,5 +1,25 @@
 # otmjka github pages site
 
+Entry Point
+src/index.html -> src/main.tsx
+
+router here:
+
+/
+/logs/:logPath
+
+Layout is
+
+src/RootLayout/RootLayout.tsx
+
+```
+├── assets
+├── public
+└── src
+    ├── Log
+    └── RootLayout
+```
+
 ```
 TODO:
 CHANGELOG.md via https://www.conventionalcommits.org/en/v1.0.0/

@@ -46,7 +46,7 @@ const LogWidget: FC<LogWidgetProps> = (props) => {
   return (
     <DosPaper dosBorderVariant={DosBorderVariant.none}>
       <DosFieldset>
-        <Typography>askdjalksdjkl</Typography>
+        <Typography component={'legend'}> [log] </Typography>
         <Menu<ItemShape>
           menuItems={menuItems}
           MenuItemComponent={LinkComponent}

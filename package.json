@@ -1,7 +1,7 @@
 {
   "name": "otmjka.github.io",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "dev": "bunx --bun vite",
@@ -18,7 +18,7 @@
     "@mui/icons-material": "^6.1.7",
     "@mui/material": "^6.1.7",
     "@mui/styled-engine-sc": "^6.1.7",
-    "otmjka-ui-components": "link:otmjka-ui-components",
+    "otmjka-ui-components": "1.0.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",

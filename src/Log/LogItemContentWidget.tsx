@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import LogContent from './LogContent'
+// import LogContent from './'
 import H1 from './H1'
 
 type LogItemContentWidgetProps = {
@@ -16,7 +16,8 @@ const LogItemContentWidget: FC<LogItemContentWidgetProps> = (props) => {
   return (
     <>
       <H1>{title}</H1>
-      <LogContent>there is content</LogContent>
+      {/* <LogContent>there is content</LogContent> */}
+      there is content
     </>
   )
 }

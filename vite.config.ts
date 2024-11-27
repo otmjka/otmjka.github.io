@@ -12,7 +12,7 @@ export default defineConfig({
   root: 'src',
   publicDir: '../public',
   build: {
-    outDir: '../',
+    outDir: '../docs',
   },
   resolve: {
     alias: { '/src': path.resolve(process.cwd(), 'src') },
