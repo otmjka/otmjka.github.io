@@ -10,7 +10,7 @@ const LogPage: FC = () => {
     <>
       <H1>log</H1>
 
-      <LogWidget state={logState} />
+      {/* <LogWidget state={logState} /> */}
     </>
   )
 }
