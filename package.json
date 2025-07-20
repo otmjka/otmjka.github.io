@@ -1,44 +1,23 @@
 {
   "name": "otmjka.github.io",
-  "private": true,
-  "version": "0.0.2",
-  "type": "module",
+  "version": "1.0.1",
+  "description": "home page",
+  "homepage": "https://github.com/otmjka/otmjka.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/otmjka/otmjka.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otmjka/otmjka.github.io.git"
+  },
+  "license": "ISC",
+  "author": "otmjka (otmjka@gmail.com)",
+  "type": "commonjs",
+  "main": "docs/index.html",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
-    "dev": "bunx --bun vite",
-    "build": "tsc -b && vite build",
-    "build1": "bunx --bun vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "@fontsource/material-icons": "^5.1.0",
-    "@fontsource/roboto": "^5.1.0",
-    "@mui/icons-material": "^6.1.7",
-    "@mui/material": "^6.1.7",
-    "@mui/styled-engine-sc": "^6.1.7",
-    "otmjka-ui-components": "1.0.9",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-markdown": "^9.0.1",
-    "react-router-dom": "^6.28.0",
-    "styled-components": "^6.1.13"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.3",
-    "eslint": "^9.13.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "globals": "^15.11.0",
-    "otmjka-eslint-prettier-config": "^1.0.0",
-    "prettier": "^3.3.3",
-    "typescript": "~5.6.2",
-    "typescript-eslint": "^8.11.0",
-    "vite": "^5.4.10"
+    "test": "jest"
   }
 }
